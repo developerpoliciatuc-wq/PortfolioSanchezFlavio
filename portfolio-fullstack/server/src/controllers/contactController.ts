@@ -2,16 +2,17 @@ import { Request, Response } from 'express';
 import emailService from '../services/emailService';
 import MessageModel from '../models/Message';
 
-export const contactFormHandler = async (req: Request, res: Response) => {
+export const contactFormHandler = async (req: Request, res: Response): Promise<void> => {
   const { name, email, message } = req.body;
 
   try {
     // Validación básica
     if (!name || !email || !message) {
-      return res.status(400).json({
+      res.status(400).json({
         success: false,
         message: 'Todos los campos son requeridos.',
       });
+      return;
     }
 
     // Guardar mensaje en la base de datos
@@ -41,8 +42,7 @@ export const contactFormHandler = async (req: Request, res: Response) => {
     console.error('Error procesando el formulario de contacto:', error);
     res.status(500).json({
       success: false,
-      message:
-        'Hubo un error enviando tu mensaje. Por favor intenta nuevamente.',
+      message: 'Hubo un error enviando tu mensaje. Por favor intenta nuevamente.',
     });
   }
 };
