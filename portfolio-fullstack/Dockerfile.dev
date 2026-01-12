@@ -1,0 +1,37 @@
+# Dockerfile para desarrollo con hot reload
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Instalar herramientas globales necesarias
+RUN npm install -g concurrently tsx
+
+# Copiar package.json de ambos proyectos
+COPY package*.json ./
+COPY client/package*.json ./client/
+COPY server/package*.json ./server/
+COPY prisma ./prisma/
+
+# Instalar dependencias en la raíz
+RUN npm install
+
+# Instalar dependencias del cliente
+WORKDIR /app/client
+RUN npm install
+
+# Instalar dependencias del servidor
+WORKDIR /app/server
+RUN npm install
+
+# Generar cliente de Prisma
+WORKDIR /app
+RUN npm run db:generate --prefix server
+
+# Volver al directorio raíz
+WORKDIR /app
+
+# Exponer puertos (cliente y servidor)
+EXPOSE 5173 5000
+
+# Comando para desarrollo
+CMD ["npm", "run", "dev"]
