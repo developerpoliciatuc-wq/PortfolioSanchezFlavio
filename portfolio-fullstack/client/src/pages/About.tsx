@@ -1,4 +1,4 @@
-import { Award, Briefcase, Code, Database, Shield, Users } from 'lucide-react';
+import { Award, Briefcase, Code, Database, GraduationCap, Shield, Users } from 'lucide-react';
 
 export default function About() {
   const timeline = [
@@ -10,8 +10,7 @@ export default function About() {
     {
       year: '2020',
       title: 'Departamento de Inteligencia Criminal',
-      description:
-        'Asignación al Departamento de Inteligencia Criminal de Tucumán',
+      description: 'Asignación al Departamento de Inteligencia Criminal de Tucumán',
     },
     {
       year: '2021',
@@ -26,14 +25,28 @@ export default function About() {
     {
       year: '2023',
       title: 'Múltiples Proyectos',
-      description:
-        'Dashboard, API, y sistemas de análisis de datos para operaciones criminales',
+      description: 'Dashboard, API, y sistemas de análisis de datos para operaciones criminales',
     },
     {
       year: '2024',
       title: 'Especialización',
+      description: 'Profundización en architecture de sistemas y machine learning',
+    },
+    {
+      year: '2026',
+      title: 'Tecnicatura en Seguridad Informática',
+      description: 'Inicio de estudios formales en ciberseguridad en Teclab',
+    },
+  ];
+
+  const education = [
+    {
+      degree: 'Tecnicatura en Seguridad Informática',
+      institution: 'Teclab',
+      period: 'Enero 2026 - Actualidad',
       description:
-        'Profundización en architecture de sistemas y machine learning',
+        'Formación profesional en ciberseguridad, análisis de vulnerabilidades, redes y protección de sistemas informáticos.',
+      current: true,
     },
   ];
 
@@ -66,42 +79,33 @@ export default function About() {
     {
       category: 'Liderazgo',
       icon: Users,
-      skills: [
-        'Gestión de Proyectos',
-        'Team Leadership',
-        'Mentoría',
-        'Comunicación',
-      ],
+      skills: ['Gestión de Proyectos', 'Team Leadership', 'Mentoría', 'Comunicación'],
     },
   ];
 
   return (
     <div>
       {/* Hero */}
-      <section className="py-20 bg-gradient-to-br from-police-darker via-police-dark to-police-blue">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <section className="bg-gradient-to-br from-police-darker via-police-dark to-police-blue py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid items-center gap-12 md:grid-cols-2">
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold text-police-light mb-6">
+              <h1 className="mb-6 text-5xl font-bold text-police-light lg:text-6xl">
                 Acerca de <span className="text-police-gold">Mí</span>
               </h1>
-              <p className="text-xl text-police-light opacity-80 mb-4">
-                Oficial de Policía Provincial Tucumán | Analista de Datos |
-                Desarrollador Full Stack
+              <p className="mb-4 text-xl text-police-light opacity-80">
+                Oficial de Policía Provincial Tucumán | Analista de Datos | Desarrollador Full Stack
               </p>
-              <p className="text-lg text-police-light opacity-70 leading-relaxed">
-                Combino mi experiencia policial con habilidades técnicas
-                avanzadas para desarrollar soluciones tecnológicas que mejoren
-                los procesos de inteligencia criminal.
+              <p className="text-lg leading-relaxed text-police-light opacity-70">
+                Combino mi experiencia policial con habilidades técnicas avanzadas para desarrollar
+                soluciones tecnológicas que mejoren los procesos de inteligencia criminal.
               </p>
             </div>
             <div className="relative">
-              <div className="w-full h-96 bg-gradient-to-br from-police-blue via-shield-blue to-police-dark rounded-lg border border-police-gold border-opacity-20 flex items-center justify-center">
+              <div className="flex h-96 w-full items-center justify-center rounded-lg border border-police-gold border-opacity-20 bg-gradient-to-br from-police-blue via-shield-blue to-police-dark">
                 <div className="text-center">
-                  <Shield className="w-32 h-32 text-police-gold mx-auto mb-4 opacity-20" />
-                  <p className="text-police-light font-bold text-lg">
-                    Dedicado a la excelencia
-                  </p>
+                  <Shield className="mx-auto mb-4 h-32 w-32 text-police-gold opacity-20" />
+                  <p className="text-lg font-bold text-police-light">Dedicado a la excelencia</p>
                 </div>
               </div>
             </div>
@@ -110,39 +114,32 @@ export default function About() {
       </section>
 
       {/* Sobre mí */}
-      <section className="py-20 bg-police-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-police-light mb-12 text-center">
+      <section className="bg-police-dark py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-12 text-center text-4xl font-bold text-police-light">
             Mi <span className="text-police-gold">Historia</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid gap-12 md:grid-cols-2">
             <div>
-              <h3 className="text-2xl font-bold text-police-gold mb-6">
-                Trayectoria Profesional
-              </h3>
-              <p className="text-police-light opacity-75 mb-4 leading-relaxed">
-                Oficial de la Policía Provincial de Tucumán desde 2019,
-                trabajando en el Departamento de Inteligencia Criminal. Mi rol
-                combina trabajo de campo tradicional con análisis de datos y
-                desarrollo de soluciones tecnológicas.
+              <h3 className="mb-6 text-2xl font-bold text-police-gold">Trayectoria Profesional</h3>
+              <p className="mb-4 leading-relaxed text-police-light opacity-75">
+                Oficial de la Policía Provincial de Tucumán desde 2019, trabajando en el
+                Departamento de Inteligencia Criminal. Mi rol combina trabajo de campo tradicional
+                con análisis de datos y desarrollo de soluciones tecnológicas.
               </p>
-              <p className="text-police-light opacity-75 mb-4 leading-relaxed">
-                Especializado en identificar problemas operacionales y
-                desarrollar aplicaciones web que optimicen procesos de análisis
-                criminal intelligence.
+              <p className="mb-4 leading-relaxed text-police-light opacity-75">
+                Especializado en identificar problemas operacionales y desarrollar aplicaciones web
+                que optimicen procesos de análisis criminal intelligence.
               </p>
-              <p className="text-police-light opacity-75 leading-relaxed">
-                Manejo fluido de información sensible, comprensión profunda de
-                seguridad de datos y arquitectura de sistemas escalables para
-                millones de registros.
+              <p className="leading-relaxed text-police-light opacity-75">
+                Manejo fluido de información sensible, comprensión profunda de seguridad de datos y
+                arquitectura de sistemas escalables para millones de registros.
               </p>
             </div>
 
             <div>
-              <h3 className="text-2xl font-bold text-police-gold mb-6">
-                Mi Enfoque
-              </h3>
+              <h3 className="mb-6 text-2xl font-bold text-police-gold">Mi Enfoque</h3>
               <ul className="space-y-4">
                 {[
                   'Soluciones personalizadas que resuelven problemas reales',
@@ -153,7 +150,7 @@ export default function About() {
                   'Continuo aprendizaje y mejora profesional',
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="w-2 h-2 bg-police-gold rounded-full mt-2 flex-shrink-0"></span>
+                    <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-police-gold"></span>
                     <span className="text-police-light opacity-75">{item}</span>
                   </li>
                 ))}
@@ -164,15 +161,15 @@ export default function About() {
       </section>
 
       {/* Timeline */}
-      <section className="py-20 bg-gradient-to-b from-police-dark to-police-darker">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-police-light mb-12 text-center">
+      <section className="bg-gradient-to-b from-police-dark to-police-darker py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-12 text-center text-4xl font-bold text-police-light">
             Mi <span className="text-police-gold">Timeline</span>
           </h2>
 
           <div className="relative">
             {/* Línea central */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-police-gold via-police-blue to-transparent"></div>
+            <div className="absolute left-1/2 h-full w-1 -translate-x-1/2 transform bg-gradient-to-b from-police-gold via-police-blue to-transparent"></div>
 
             {/* Eventos */}
             <div className="space-y-12">
@@ -185,22 +182,18 @@ export default function About() {
                 >
                   {/* Contenido */}
                   <div className="flex-1">
-                    <div className="bg-police-blue bg-opacity-10 border border-police-gold border-opacity-20 p-6 rounded-lg hover:border-opacity-40 transition-all">
-                      <span className="inline-block px-3 py-1 bg-police-accent text-white text-xs font-bold rounded mb-2">
+                    <div className="rounded-lg border border-police-gold border-opacity-20 bg-police-blue bg-opacity-10 p-6 transition-all hover:border-opacity-40">
+                      <span className="mb-2 inline-block rounded bg-police-accent px-3 py-1 text-xs font-bold text-white">
                         {event.year}
                       </span>
-                      <h3 className="text-xl font-bold text-police-light mb-2">
-                        {event.title}
-                      </h3>
-                      <p className="text-police-light opacity-70">
-                        {event.description}
-                      </p>
+                      <h3 className="mb-2 text-xl font-bold text-police-light">{event.title}</h3>
+                      <p className="text-police-light opacity-70">{event.description}</p>
                     </div>
                   </div>
 
                   {/* Punto */}
-                  <div className="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-police border-4 border-police-dark flex items-center justify-center">
-                    <span className="w-4 h-4 bg-police-gold rounded-full"></span>
+                  <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-full border-4 border-police-dark bg-gradient-police">
+                    <span className="h-4 w-4 rounded-full bg-police-gold"></span>
                   </div>
 
                   {/* Espaciador */}
@@ -212,32 +205,69 @@ export default function About() {
         </div>
       </section>
 
+      {/* Formación Académica */}
+      <section className="bg-police-dark py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-12 text-center text-4xl font-bold text-police-light">
+            Formación <span className="text-police-gold">Académica</span>
+          </h2>
+
+          <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-1 lg:grid-cols-2">
+            {education.map((edu, index) => (
+              <div
+                key={index}
+                className="group rounded-lg border border-police-gold border-opacity-20 bg-police-blue bg-opacity-10 p-8 transition-all duration-300 hover:border-opacity-40 hover:bg-opacity-20"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-police transition-all group-hover:shadow-lg">
+                    <GraduationCap className="h-8 w-8 text-police-gold" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="mb-2 flex items-center gap-3">
+                      <h3 className="text-xl font-bold text-police-light">{edu.degree}</h3>
+                      {edu.current && (
+                        <span className="animate-pulse rounded bg-police-accent px-3 py-1 text-xs font-bold text-white">
+                          En curso
+                        </span>
+                      )}
+                    </div>
+                    <p className="mb-1 font-semibold text-police-gold">{edu.institution}</p>
+                    <p className="mb-3 text-sm text-police-light opacity-60">{edu.period}</p>
+                    <p className="text-police-light opacity-75">{edu.description}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Habilidades */}
-      <section className="py-20 bg-police-dark">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-police-light mb-12 text-center">
+      <section className="bg-gradient-to-b from-police-dark to-police-darker py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h2 className="mb-12 text-center text-4xl font-bold text-police-light">
             Mis <span className="text-police-gold">Habilidades</span>
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {skills.map((skillGroup, index) => {
               const Icon = skillGroup.icon;
               return (
                 <div
                   key={index}
-                  className="p-8 bg-police-blue bg-opacity-10 border border-police-gold border-opacity-20 rounded-lg hover:border-opacity-40 hover:bg-opacity-20 transition-all duration-300 group"
+                  className="group rounded-lg border border-police-gold border-opacity-20 bg-police-blue bg-opacity-10 p-8 transition-all duration-300 hover:border-opacity-40 hover:bg-opacity-20"
                 >
-                  <div className="w-12 h-12 bg-gradient-police rounded-lg flex items-center justify-center mb-4 group-hover:shadow-lg transition-all">
-                    <Icon className="w-6 h-6 text-police-gold" />
+                  <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-police transition-all group-hover:shadow-lg">
+                    <Icon className="h-6 w-6 text-police-gold" />
                   </div>
-                  <h3 className="text-xl font-bold text-police-light mb-4">
+                  <h3 className="mb-4 text-xl font-bold text-police-light">
                     {skillGroup.category}
                   </h3>
                   <div className="flex flex-wrap gap-2">
-                    {skillGroup.skills.map(skill => (
+                    {skillGroup.skills.map((skill) => (
                       <span
                         key={skill}
-                        className="px-3 py-1 bg-police-blue bg-opacity-30 text-police-gold text-xs font-bold rounded border border-police-gold border-opacity-20"
+                        className="rounded border border-police-gold border-opacity-20 bg-police-blue bg-opacity-30 px-3 py-1 text-xs font-bold text-police-gold"
                       >
                         {skill}
                       </span>
@@ -251,18 +281,15 @@ export default function About() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-police-blue via-police-dark to-police-blue border-t border-police-blue border-opacity-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-police-light mb-4">
-            ¿Quieres trabajar juntos?
-          </h2>
-          <p className="text-lg text-police-light opacity-70 mb-8 max-w-2xl mx-auto">
-            Estoy disponible para consultas, proyectos y colaboraciones
-            profesionales.
+      <section className="border-t border-police-blue border-opacity-20 bg-gradient-to-r from-police-blue via-police-dark to-police-blue py-20">
+        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="mb-4 text-4xl font-bold text-police-light">¿Quieres trabajar juntos?</h2>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-police-light opacity-70">
+            Estoy disponible para consultas, proyectos y colaboraciones profesionales.
           </p>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-police text-police-gold font-bold rounded-lg hover:shadow-lg transition-all duration-300 uppercase tracking-wider text-sm border border-police-gold border-opacity-30"
+            className="inline-flex items-center gap-2 rounded-lg border border-police-gold border-opacity-30 bg-gradient-police px-8 py-3 text-sm font-bold uppercase tracking-wider text-police-gold transition-all duration-300 hover:shadow-lg"
           >
             Iniciar Conversación
           </a>
